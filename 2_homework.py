@@ -61,6 +61,10 @@ for e in range(1, num + 1):
 print(f"Произведения чисел от 1 до {num}:  {list}")
 """
 
+
+
+
+"""
 # Реализуйте алгоритм перемешивания списка.
 
 import random
@@ -68,3 +72,41 @@ list_input = list(range(-10, 10, 3))
 print(f'    Исходный список: {list_input}')
 random.shuffle(list_input)
 print(f'Перемешанный список: {list_input}')
+"""
+
+"""
+Задайте список из n чисел последовательности (1 + 1/n)^n и выведите на экран их сумму.
+
+def func(n):
+    return (1 + (1 / n)) ** n
+
+number = int(input('Введите число: '))
+list = {}
+sum = 0
+for i in range(1, number + 1):
+    list[i] = func(i)
+    sum += list[i]
+print(round(sum.real, 3))
+
+"""
+
+"""
+
+#Задайте список из N элементов, заполненных числами из промежутка [-N, N]. 
+# Найдите произведение элементов на указанных позициях. 
+# Позиции хранятся в файле file.txt в одной строке одно число.
+
+import random
+number = int(input('Введите число: '))
+list = []
+for i in range(number):
+    list.append(random.randint(-number, number))
+print(f'Исходые значения списка: {list}')
+
+file = open('file.txt', 'r') #6, 4, 2, 1, 0
+output = 1
+for i in file.read():
+    if (i != '\n'):
+        output *= list[int(i)]
+print(f'Произведение чисел: {output}')
+"""
