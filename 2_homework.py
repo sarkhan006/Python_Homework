@@ -33,7 +33,7 @@ print(f"Сумма цифр = {sumNums(num)}")
 Пример:
 - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4) """
 
-
+"""
 def InputNumbers(inputText):
     is_OK = False
     while not is_OK:
@@ -59,3 +59,12 @@ for e in range(1, num + 1):
     list.append(mult(e))
 
 print(f"Произведения чисел от 1 до {num}:  {list}")
+"""
+
+# Реализуйте алгоритм перемешивания списка.
+
+import random
+list_input = list(range(-10, 10, 3))
+print(f'    Исходный список: {list_input}')
+random.shuffle(list_input)
+print(f'Перемешанный список: {list_input}')
